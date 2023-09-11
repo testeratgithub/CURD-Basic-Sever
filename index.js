@@ -57,6 +57,6 @@ app.delete("/delete/:id", async(req,res) => {
     res.end();
 });
    
-app.listen(8080, () =>{
+app.listen(3000, () =>{
     console.log("server is running");
 });
