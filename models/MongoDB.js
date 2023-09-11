@@ -12,7 +12,14 @@ class MongoDB{
         const {MongoClient} = require('mongodb')
         this.o_id = require('mongodb').ObjectId
         const client = new MongoClient(uri)
-        client.connect()
+        try{
+            client.connect()
+        }
+        catch{
+            console.log("DB Connection isuess")
+            client.connect()
+        }
+                
         this.connection = client.db('CURD').collection('Food')
         // db.createCollection("Food",{validator:{$jsonSchema:{
         //     bsonType:"object",
