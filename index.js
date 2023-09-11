@@ -1,7 +1,7 @@
 const express=require('express');
 // const mongoose=require('mongoose');
 const cors=require('cors');
-const mdb=require('mongodb')
+
 const app=express();
 app.use(express.json());
 app.use(cors());
@@ -57,6 +57,6 @@ app.delete("/delete/:id", async(req,res) => {
     res.end();
 });
    
-app.listen(3000, () =>{
+app.listen(8080, () =>{
     console.log("server is running");
 });
